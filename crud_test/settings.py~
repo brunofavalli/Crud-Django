@@ -13,6 +13,10 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 ROOTDIR = os.path.realpath(os.path.dirname(__file__))
 
+MEDIA_ROOT = os.path.join(ROOTDIR, "media")
+MEDIA_URL = '/media/imagens/'
+ADMIN_MEDIA_PREFIX = '/admin_media/'
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -47,7 +51,7 @@ TEMPLATE_DIRS = (
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -57,6 +61,8 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'crud_test.urls'
 
 WSGI_APPLICATION = 'crud_test.wsgi.application'
+
+
 
 
 # Database
@@ -74,7 +80,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'pt_BR'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 

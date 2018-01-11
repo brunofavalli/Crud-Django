@@ -8,4 +8,4 @@ from models import Crud
 class FormCrud(forms.ModelForm):
 	class Meta:
 		model = Crud
-		
+		fields = '__all__'
